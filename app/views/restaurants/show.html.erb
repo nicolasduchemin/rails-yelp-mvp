@@ -17,5 +17,21 @@
       <%= link_to "Add a Review", new_restaurant_review_path(@restaurant) %>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <ul class="list-unstyled">
+            <% @restaurant.reviews.each do |review| %>
+              <li>Rating:
+                <% review.rating.times do %>
+                <%= image_tag "yelp-star.png" %>
+                <% end %>
+              </li>
+              <li><%= review.content %></li>
+              <li><hr></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
   </div>
 </div>
+

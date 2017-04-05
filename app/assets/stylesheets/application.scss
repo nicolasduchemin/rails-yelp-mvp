@@ -13,3 +13,30 @@
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #F5F5F5;
+}
+
+h2, h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+// Button
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #D23333;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #D23333;
+  text-decoration: none;
+  color: white;
+}
