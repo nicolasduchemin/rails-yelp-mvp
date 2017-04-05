@@ -1,30 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">Restaurant Details</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+    <ul class="list-unstyled">
+      <li><strong>Name:</strong> <%= @restaurant.name %></li>
+      <li><strong>Address:</strong> <%= @restaurant.address %></li>
+      <li><strong>Phone Number:</strong> <%= @restaurant.phone_number %></li>
+      <li><strong>Category:</strong> <%= @restaurant.category %></li>
+      <li><strong>Description:</strong> <%= @restaurant.description %></li>
+    </ul>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+    <div>
+      <%= link_to "Back to index", restaurants_path %>
+      <%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :Delete, data: {confirm: "Are your sure?"} %>
+      <%= link_to "Edit Restaurant details", edit_restaurant_path(@restaurant) %>
+      <%= link_to "Add a Review", new_restaurant_review_path(@restaurant) %>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @restaurant.description %>
-</p>
-
-<p>
-  <%= @restaurant.stars %>
-  <%= @restaurant.stars %>
-</p>
-
-<p>
-  <%= @restaurant.reviews.each do |review| %>
-  <%= @restaurant.stars %> # Need to change this line
-</p>
-
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
-<% end %>
+  </div>
+</div>
